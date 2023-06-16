@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { useDispatch } from 'react-redux';
 
-import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 
 import {
   ContactItem,
@@ -23,7 +23,7 @@ export const ContactsListItem = ({ id, name, number }) => {
       <ContactName>
         {name}:<ContactNumber>{number}</ContactNumber>
       </ContactName>
-      <Button onClick={() => handleDeleteContact(id)}>x</Button>
+      <Button onClick={() => handleDeleteContact(id)}>Delete</Button>
     </ContactItem>
   );
 };
